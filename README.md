@@ -22,41 +22,42 @@ This project models a simplified version of a sports **depth chart manager**.
 
 ```
 Fanduel
-├── FanduelDepthChart
-│   └── Program.cs
-│
-├── FanduelDepthChart.Core
-│   ├── Constants
-│   │   ├── NflPositions.cs
-│   │   └── SportTypes.cs
-│   │
-│   ├── Interfaces
-│   │   ├── IDepthChart.cs
-│   │   ├── ISport.cs
-│   │   ├── ISportManager.cs
-│   │   └── ITeam.cs
-│   │
-│   ├── Models
-│   │   └── Player.cs
-│   │
-│   └── Services
-│       ├── DepthChart.cs
-│       ├── Sport.cs
-│       ├── SportManager.cs
-│       └── Team.cs
-│
-├── FanduelDepthChart.Tests
-│   ├── Integration
-│   │   └── DepthChartIntegrationTests.cs
-│   │
-│   └── Unit
-│       ├── DepthChartTests.cs
-│       ├── SportManagerTests.cs
-│       ├── SportTests.cs
-│       └── TeamTests.cs
-│
-├── README.md
-└── .git
+|-- FanDuelDepthChart
+|   |-- Program.cs
+|
+|-- FanDuelDepthChart.Core
+|   |-- Constants
+|   |   |-- NflPositions.cs
+|   |   |-- SportTypes.cs
+|   |
+|   |-- Interfaces
+|   |   |-- IDepthChart.cs
+|   |   |-- ISport.cs
+|   |   |-- ISportManager.cs
+|   |   |-- ITeam.cs
+|   |
+|   |-- Models
+|   |   |-- Player.cs
+|   |
+|   |-- Services
+|       |-- DepthChart.cs
+|       |-- Sport.cs
+|       |-- SportManager.cs
+|       |-- Team.cs
+|
+|-- FanDuelDepthChart.Tests
+|   |-- Integration
+|   |   |-- DepthChartIntegrationTests.cs
+|   |
+|   |-- Unit
+|       |-- DepthChartTests.cs
+|       |-- SportManagerTests.cs
+|       |-- SportTests.cs
+|       |-- TeamTests.cs
+|
+|-- README.md
+|-- .git
+|-- .gitignore
 ```
 
 ---
