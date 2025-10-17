@@ -131,5 +131,3 @@ team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, john);
 var backups = team.DepthChart.GetBackups(NflPositions.QB, tom);
 Console.WriteLine(team.DepthChart.GetFullDepthChart());
 ```
-
----

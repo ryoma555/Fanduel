@@ -19,8 +19,8 @@ namespace FanDuelDepthChart.Core.Services
 
         public void AddTeam(ITeam team)
         {
-            if (team is null)
-                throw new ArgumentNullException(nameof(team));
+            ArgumentNullException.ThrowIfNull(team);
+
             if (string.IsNullOrWhiteSpace(team.Name))
                 throw new ArgumentException("Team must have a non-empty name.", nameof(team));
 

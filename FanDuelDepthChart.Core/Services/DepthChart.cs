@@ -14,7 +14,6 @@ namespace FanDuelDepthChart.Core.Services
             _validPositions = validPositions ?? [];
         }
 
-
         public void AddPlayerToDepthChart(string position, Player player, int? positionDepth = null)
         {
             ValidatePositionAndPlayer(position, player);
@@ -48,10 +47,12 @@ namespace FanDuelDepthChart.Core.Services
         {
             ValidatePositionAndPlayer(position, player);
 
+            // Return null if position does not exist
             if (!_chart.TryGetValue(position, out var players))
                 return null;
 
             int index = players.FindIndex(p => p.Number == player.Number);
+            // Return null if player not found
             if (index < 0)
                 return null;
 
@@ -64,6 +65,7 @@ namespace FanDuelDepthChart.Core.Services
         {
             ValidatePositionAndPlayer(position, player);
 
+            // Return empty list if position does not exist
             if (!_chart.TryGetValue(position, out var players))
                 return [];
 
@@ -72,23 +74,13 @@ namespace FanDuelDepthChart.Core.Services
             // If player not found or is the last in the list, return empty list
             if (index == -1 || index == players.Count - 1) return [];
 
-            return players.GetRange(index + 1, players.Count - (index + 1));
+            return players[(index + 1)..];
         }
 
         public string GetFullDepthChart()
         {
-            var sb = new StringBuilder();
-
-            foreach (var kvp in _chart)
-            {
-                string position = kvp.Key;
-                string playersStr = string.Join(", ", kvp.Value.Select(p => p.ToString()));
-                sb.AppendLine($"{position} – {playersStr}");
-            }
-
-            string result = sb.ToString().TrimEnd();
-
-            return result;
+            return string.Join(Environment.NewLine,
+                _chart.Select(kvp => $"{kvp.Key} – {string.Join(", ", kvp.Value)}"));
         }
 
         private void ValidatePositionAndPlayer(string position, Player player)
@@ -100,8 +92,7 @@ namespace FanDuelDepthChart.Core.Services
             if (_validPositions != null && _validPositions.Count > 0 && !_validPositions.Contains(position))
                 throw new ArgumentException($"Invalid position '{position}' for this sport.", nameof(position));
 
-            if (player is null)
-                throw new ArgumentNullException(nameof(player));
+            ArgumentNullException.ThrowIfNull(player);
         }
     }
 }

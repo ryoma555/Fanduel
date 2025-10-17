@@ -8,8 +8,8 @@ namespace FanDuelDepthChart.Core.Services
 
         public void AddSport(ISport sport)
         {
-            if (sport is null)
-                throw new ArgumentNullException(nameof(sport));
+            ArgumentNullException.ThrowIfNull(sport);
+
             if (_sports.ContainsKey(sport.Name))
                 throw new InvalidOperationException($"Sport '{sport.Name}' already exists.");
 

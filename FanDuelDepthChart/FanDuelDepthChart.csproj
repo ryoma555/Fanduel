@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FanDuelDepthChart.Core\FanDuelDepthChart.Core.csproj" />
+  </ItemGroup>
+
 </Project>

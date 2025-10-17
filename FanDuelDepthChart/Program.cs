@@ -1,30 +1,61 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using FanDuelDepthChart.Constants;
+using FanDuelDepthChart.Core.Constants;
+using FanDuelDepthChart.Core.Services;
+using FanDuelDepthChart.Models;
 
+Console.WriteLine("FanDuel DepthChart Demo");
 
-Console.WriteLine("Hello, World!");
+// Create NFL sport
+var nfl = new Sport(SportTypes.NFL, NflPositions.All);
 
+// Create a team with a DepthChart
+var team = new Team("Team Awesome", new DepthChart(nfl.ValidPositions));
+nfl.AddTeam(team);
 
-   // Create NFL DepthCharts
-//ISportDepthCharts nflCharts = new SportDepthCharts("NFL");
-//nflCharts.AddTeam("TB");
+// Create players
+var tom = new Player("Tom Brady", 12);
+var john = new Player("John Cena", 11);
+var mike = new Player("Mike Tyson", 13);
+var travis = new Player("Travis Kelce", 87);
+var taylor = new Player("Taylor Swift", 22);
 
-//var tb = nflCharts.GetTeam("TB");
+// Add players to multiple positions
+team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, tom);
+team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, john);
 
-//var TomBrady = new Player(12, "Tom Brady");
-//var BlaineGabbert = new Player(11, "Blaine Gabbert");
-//var KyleTrask = new Player(2, "Kyle Trask");
+team.DepthChart.AddPlayerToDepthChart(NflPositions.TE, travis);
+team.DepthChart.AddPlayerToDepthChart(NflPositions.TE, taylor);
 
-//tb.DepthChart.AddPlayerToDepthChart(NflPositions.QB, TomBrady, 0);
-//tb.DepthChart.AddPlayerToDepthChart(NflPositions.QB, BlaineGabbert, 1);
-//tb.DepthChart.AddPlayerToDepthChart(NflPositions.QB, KyleTrask, 2);
+team.DepthChart.AddPlayerToDepthChart(NflPositions.RB, taylor);
 
-//tb.DepthChart.PrintFullDepthChart();
+team.DepthChart.AddPlayerToDepthChart(NflPositions.LS, mike);
+team.DepthChart.AddPlayerToDepthChart(NflPositions.LS, travis);
 
-//var backups = tb.DepthChart.GetBackups(NflPositions.QB, TomBrady);
-//Console.WriteLine("Backups for Tom Brady:");
-//backups.ForEach(p => Console.WriteLine(p));
+// Display backups for a position
+Console.WriteLine($"QB Backups for {tom.Name}:");
+foreach (var backup in team.DepthChart.GetBackups(NflPositions.QB, tom))
+{
+    Console.WriteLine(backup);
+}
 
-//var removed = tb.DepthChart.RemovePlayerFromDepthChart(NflPositions.QB, BlaineGabbert);
-//Console.WriteLine($"Removed player: {removed}");
-//tb.DepthChart.PrintFullDepthChart();
+Console.WriteLine($"TE Backups for {travis.Name}:");
+foreach (var backup in team.DepthChart.GetBackups(NflPositions.TE, travis))
+{
+    Console.WriteLine(backup);
+}
 
+Console.WriteLine($"RB Backups for {taylor.Name}:");
+foreach (var backup in team.DepthChart.GetBackups(NflPositions.RB, taylor))
+{
+    Console.WriteLine(backup);
+}
+
+Console.WriteLine($"LS Backups for {mike.Name}:");
+foreach (var backup in team.DepthChart.GetBackups(NflPositions.LS, mike))
+{
+    Console.WriteLine(backup);
+}
+
+// Display full depth chart
+Console.WriteLine("Full Depth Chart:");
+Console.WriteLine(team.DepthChart.GetFullDepthChart());
