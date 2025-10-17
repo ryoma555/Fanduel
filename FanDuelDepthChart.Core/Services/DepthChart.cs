@@ -88,8 +88,6 @@ namespace FanDuelDepthChart.Core.Services
 
             string result = sb.ToString().TrimEnd();
 
-            Console.WriteLine(result); // prints for console demo
-
             return result;
         }
 

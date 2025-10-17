@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Workspace\\Fanduel\\FanDuelDepthChart\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E98AF06B-043D-4A17-9991-64CEA5C21BAF}|..\\FanDuelDepthChart.Core\\FanDuelDepthChart.Core.csproj|c:\\workspace\\fanduel\\fandueldepthchart.core\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DB690A29-7941-471D-847E-1AA46823D672}|..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj|c:\\workspace\\fanduel\\fandueldepthchart.tests\\unit\\teamtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,9 +42,6 @@
       "AbsoluteMoniker": "D:0:0:{E98AF06B-043D-4A17-9991-64CEA5C21BAF}|..\\FanDuelDepthChart.Core\\FanDuelDepthChart.Core.csproj|c:\\workspace\\fanduel\\fandueldepthchart.core\\interfaces\\iteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E98AF06B-043D-4A17-9991-64CEA5C21BAF}|..\\FanDuelDepthChart.Core\\FanDuelDepthChart.Core.csproj|c:\\workspace\\fanduel\\fandueldepthchart.core\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E98AF06B-043D-4A17-9991-64CEA5C21BAF}|..\\FanDuelDepthChart.Core\\FanDuelDepthChart.Core.csproj|c:\\workspace\\fanduel\\fandueldepthchart.core\\interfaces\\idepthchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -65,24 +65,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DepthChartIntegrationTests.cs",
-              "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
-              "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
-              "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
-              "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAIwJEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:40:09.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "DepthChartTests.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Unit\\DepthChartTests.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Unit\\DepthChartTests.cs",
@@ -90,12 +77,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Unit\\DepthChartTests.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAAwIkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T04:54:27.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T04:54:27.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SportManagerTests.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Unit\\SportManagerTests.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Unit\\SportManagerTests.cs",
@@ -103,25 +89,24 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Unit\\SportManagerTests.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:21:47.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T08:21:47.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TeamTests.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
               "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
               "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAcwEAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAcwBwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T06:15:42.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SportTests.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Unit\\SportTests.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Unit\\SportTests.cs",
@@ -129,12 +114,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Unit\\SportTests.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAiwG4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:18:45.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T08:18:45.106Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DepthChart.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Services\\DepthChart.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Services\\DepthChart.cs",
@@ -142,12 +126,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Services\\DepthChart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T03:48:36.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T03:48:36.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Sport.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Services\\Sport.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Services\\Sport.cs",
@@ -155,12 +138,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Services\\Sport.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T06:19:59.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T06:19:59.982Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Services\\Team.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Services\\Team.cs",
@@ -168,12 +150,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Services\\Team.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T10:46:34.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T10:46:34.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "SportManager.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Services\\SportManager.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Services\\SportManager.cs",
@@ -181,12 +162,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Services\\SportManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T10:46:34.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T10:46:34.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ISport.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Interfaces\\ISport.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Interfaces\\ISport.cs",
@@ -194,12 +174,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Interfaces\\ISport.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T06:31:40.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T06:31:40.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ISportManager.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Interfaces\\ISportManager.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Interfaces\\ISportManager.cs",
@@ -207,12 +186,11 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Interfaces\\ISportManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T10:50:30.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T10:50:30.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ITeam.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Interfaces\\ITeam.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Interfaces\\ITeam.cs",
@@ -220,21 +198,32 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Interfaces\\ITeam.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T10:46:06.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T10:46:06.357Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Models\\Player.cs",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Core\\Models\\Player.cs",
               "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Core\\Models\\Player.cs",
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Models\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T04:55:02.182Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DepthChartIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
+              "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
+              "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
+              "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Integration\\DepthChartIntegrationTests.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwJEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:40:09.081Z"
             },
             {
               "$type": "Document",
@@ -246,8 +235,7 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Interfaces\\IDepthChart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T03:46:59.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T03:46:59.762Z"
             },
             {
               "$type": "Document",
@@ -259,8 +247,7 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Constants\\SportTypes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:25:35.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T08:25:35.767Z"
             },
             {
               "$type": "Document",
@@ -272,8 +259,7 @@
               "RelativeToolTip": "..\\FanDuelDepthChart.Core\\Constants\\NflPositions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T10:52:24.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T10:52:24.819Z"
             },
             {
               "$type": "Document",
@@ -281,12 +267,11 @@
               "Title": "FanDuelDepthChart.Tests.csproj",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
-              "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj*",
-              "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj*",
+              "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
+              "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-16T08:39:29.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T08:39:29.617Z"
             },
             {
               "$type": "Document",
@@ -298,8 +283,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T03:41:59.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T03:41:59.689Z"
             },
             {
               "$type": "Bookmark",

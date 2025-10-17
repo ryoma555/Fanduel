@@ -64,7 +64,7 @@ Fanduel
 
 ## ⚙️ Technologies & Versions
 
-- **Language**: C# (.NET 8 or later)
+- **Language**: C# .Net 9
 - **Testing Framework**: NUnit 4.4.0
 - **NUnit Analyzer**: NUnit.Analyzers 4.10.0
 - **NUnit3 Test Adapter**: 5.2.0
@@ -79,7 +79,7 @@ A lightweight immutable record representing a player.
 ```csharp
 public record Player(string Name, int Number)
 {
-    public override string ToString() => $"#{Number}, {Name}";
+    public override string ToString() => $"(#{Number}, {Name})";
 }
 ```
 
@@ -109,12 +109,8 @@ manager.AddSport(new Sport(SportTypes.NFL, NflPositions.All));
 
 ### Run all tests:
 ```bash
+cd FanDuelDepthChart.Tests
 dotnet test
-```
-
-### Run a specific test category:
-```bash
-dotnet test --filter TestCategory=Integration
 ```
 
 ---
@@ -122,8 +118,8 @@ dotnet test --filter TestCategory=Integration
 ## 🧰 Example Usage
 
 ```csharp
-var nfl = new Sport("NFL", NflPositions.All);
-var team = new Team("Tampa Bay Buccaneers", new DepthChart(nfl.ValidPositions));
+var nfl = new Sport(SportTypes.NFL, NflPositions.All);
+var team = new Team("Team 1", new DepthChart(nfl.ValidPositions));
 nfl.AddTeam(team);
 
 var tom = new Player("Tom Brady", 12);
