@@ -1,0 +1,14 @@
+C:\Workspace\Fanduel\FanDuelDepthChart\bin\Debug\net9.0\FanDuelDepthChart.exe
+C:\Workspace\Fanduel\FanDuelDepthChart\bin\Debug\net9.0\FanDuelDepthChart.deps.json
+C:\Workspace\Fanduel\FanDuelDepthChart\bin\Debug\net9.0\FanDuelDepthChart.runtimeconfig.json
+C:\Workspace\Fanduel\FanDuelDepthChart\bin\Debug\net9.0\FanDuelDepthChart.dll
+C:\Workspace\Fanduel\FanDuelDepthChart\bin\Debug\net9.0\FanDuelDepthChart.pdb
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.AssemblyInfoInputs.cache
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.AssemblyInfo.cs
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.csproj.CoreCompileInputs.cache
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.dll
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\refint\FanDuelDepthChart.dll
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.pdb
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\FanDuelDepthChart.genruntimeconfig.cache
+C:\Workspace\Fanduel\FanDuelDepthChart\obj\Debug\net9.0\ref\FanDuelDepthChart.dll
