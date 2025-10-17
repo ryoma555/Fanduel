@@ -1,10 +1,10 @@
 # Build Folders
-bin/
-obj/
-out/
+*/bin/*
+*/obj/*
+*/out/*
 
 # Visual Studio / Rider / IDE files
-.vs/
+*/vs/*
 *.user
 *.suo
 *.userprefs
