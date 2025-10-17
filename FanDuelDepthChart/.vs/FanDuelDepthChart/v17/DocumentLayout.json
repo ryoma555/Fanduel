@@ -114,7 +114,7 @@
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
               "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
               "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\Unit\\TeamTests.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA4wEAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAcwEAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T06:15:42.97Z",
               "EditorCaption": ""
@@ -276,17 +276,13 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "FanDuelDepthChart.Tests",
+              "Title": "FanDuelDepthChart.Tests.csproj",
               "DocumentMoniker": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
               "RelativeDocumentMoniker": "..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
-              "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
-              "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj",
+              "ToolTip": "C:\\Workspace\\Fanduel\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj*",
+              "RelativeToolTip": "..\\FanDuelDepthChart.Tests\\FanDuelDepthChart.Tests.csproj*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-16T08:39:29.617Z",
@@ -302,7 +298,12 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T03:41:59.689Z"
+              "WhenOpened": "2025-10-15T03:41:59.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

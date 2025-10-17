@@ -1,0 +1,44 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# Visual Studio / Rider / IDE files
+.vs/
+*.user
+*.suo
+*.userprefs
+*.ncb
+*.sln.docstates
+
+# Rider
+.idea/
+
+# ReSharper
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+packages/
+# NuGet package restore
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+# Rider and Visual Studio Code
+.vscode/
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testresults
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini

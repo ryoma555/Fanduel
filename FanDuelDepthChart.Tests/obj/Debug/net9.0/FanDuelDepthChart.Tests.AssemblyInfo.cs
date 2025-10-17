@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FanDuelDepthChart.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a28b419c50b959ccc9e62b97f8bd01a92079c4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FanDuelDepthChart.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FanDuelDepthChart.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
