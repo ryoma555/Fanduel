@@ -1,16 +1,53 @@
 ﻿using FanDuelDepthChart.Constants;
 using FanDuelDepthChart.Core.Constants;
+using FanDuelDepthChart.Core.Interfaces;
 using FanDuelDepthChart.Core.Services;
 using FanDuelDepthChart.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("FanDuel DepthChart Demo");
 
-// Create NFL sport
-var nfl = new Sport(SportTypes.NFL, NflPositions.All);
+// Setup DI
+var services = new ServiceCollection();
 
-// Create a team with a DepthChart
-var team = new Team("Team Awesome", new DepthChart(nfl.ValidPositions));
-nfl.AddTeam(team);
+// Register SportManager as singleton
+services.AddSingleton<ISportManager, SportManager>();
+
+// Register Sport/s
+services.AddSingleton<ISport>(provider =>
+{
+    var sportManager = provider.GetRequiredService<ISportManager>();
+
+    var nfl = new Sport(SportTypes.NFL, NflPositions.All);
+    sportManager.AddSport(nfl);
+
+    return nfl;
+});
+
+// Register Team/s
+services.AddSingleton<ITeam>(provider =>
+{
+    var allSports = provider.GetServices<ISport>();
+    var nfl = allSports.First(s => s.Name == SportTypes.NFL);
+
+    var depthChart = new DepthChart(nfl.ValidPositions);
+    var team = new Team("Team Awesome", depthChart);
+    nfl.AddTeam(team);
+
+    return team;
+});
+
+// Build the provider
+var provider = services.BuildServiceProvider();
+
+// Resolve services
+var sportManager = provider.GetRequiredService<ISportManager>();
+var allSports = provider.GetServices<ISport>();
+var nfl = allSports.Single(s => s.Name == SportTypes.NFL);
+
+// Resolve Teams
+var allTeams = provider.GetServices<ITeam>().ToList();
+var teamAwesome = allTeams.Single(t => t.Name == "Team Awesome");
 
 // Create players
 var tom = new Player("Tom Brady", 12);
@@ -20,42 +57,42 @@ var travis = new Player("Travis Kelce", 87);
 var taylor = new Player("Taylor Swift", 22);
 
 // Add players to multiple positions
-team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, tom);
-team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, john);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.QB, tom);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.QB, john);
 
-team.DepthChart.AddPlayerToDepthChart(NflPositions.TE, travis);
-team.DepthChart.AddPlayerToDepthChart(NflPositions.TE, taylor);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.TE, travis);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.TE, taylor);
 
-team.DepthChart.AddPlayerToDepthChart(NflPositions.RB, taylor);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.RB, taylor);
 
-team.DepthChart.AddPlayerToDepthChart(NflPositions.LS, mike);
-team.DepthChart.AddPlayerToDepthChart(NflPositions.LS, travis);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.LS, mike);
+teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.LS, travis);
 
 // Display backups for a position
-Console.WriteLine($"QB Backups for {tom.Name}:");
-foreach (var backup in team.DepthChart.GetBackups(NflPositions.QB, tom))
+Console.WriteLine($"\nQB Backups for {tom.Name}:");
+foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.QB, tom))
 {
     Console.WriteLine(backup);
 }
 
-Console.WriteLine($"TE Backups for {travis.Name}:");
-foreach (var backup in team.DepthChart.GetBackups(NflPositions.TE, travis))
+Console.WriteLine($"\nTE Backups for {travis.Name}:");
+foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.TE, travis))
 {
     Console.WriteLine(backup);
 }
 
-Console.WriteLine($"RB Backups for {taylor.Name}:");
-foreach (var backup in team.DepthChart.GetBackups(NflPositions.RB, taylor))
+Console.WriteLine($"\nRB Backups for {taylor.Name}:");
+foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.RB, taylor))
 {
     Console.WriteLine(backup);
 }
 
-Console.WriteLine($"LS Backups for {mike.Name}:");
-foreach (var backup in team.DepthChart.GetBackups(NflPositions.LS, mike))
+Console.WriteLine($"\nLS Backups for {mike.Name}:");
+foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.LS, mike))
 {
     Console.WriteLine(backup);
 }
 
 // Display full depth chart
-Console.WriteLine("Full Depth Chart:");
-Console.WriteLine(team.DepthChart.GetFullDepthChart());
+Console.WriteLine("\nFull Depth Chart:");
+Console.WriteLine(teamAwesome.DepthChart.GetFullDepthChart());

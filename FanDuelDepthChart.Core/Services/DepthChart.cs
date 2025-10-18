@@ -1,6 +1,5 @@
 ﻿using FanDuelDepthChart.Core.Interfaces;
 using FanDuelDepthChart.Models;
-using System.Text;
 
 namespace FanDuelDepthChart.Core.Services
 {
