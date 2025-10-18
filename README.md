@@ -1,4 +1,4 @@
-# FanDuel Depth Chart
+# 🏈 FanDuel Depth Chart
 
 A modular C# solution to manage and visualize team depth charts for different sports (e.g., NFL).  
 The system allows adding, removing, and retrieving players per position, supports multiple sports and teams, and includes both unit and integration tests.
@@ -21,7 +21,7 @@ This project models a simplified version of a sports **depth chart manager**.
 ## 🏗 Folder Structure
 
 ```
-Fanduel
+FanDuel
 |-- FanDuelDepthChart
 |   |-- Program.cs
 |
@@ -105,9 +105,17 @@ manager.AddSport(new Sport(SportTypes.NFL, NflPositions.All));
 
 ---
 
-## 🧪 Running Tests
+## 🚀 Running the Program
 
-### Run all tests:
+```bash
+cd FanDuelDepthChart
+dotnet run
+```
+
+---
+
+## 🧪 Running the Tests
+
 ```bash
 cd FanDuelDepthChart.Tests
 dotnet test
