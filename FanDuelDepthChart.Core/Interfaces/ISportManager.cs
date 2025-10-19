@@ -4,6 +4,6 @@
     {
         void AddSport(ISport sport);
         ISport? GetSport(string name);
-        IEnumerable<ISport> GetAllSports();
+        IReadOnlyCollection<ISport> GetAllSports();
     }
 }

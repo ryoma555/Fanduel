@@ -24,6 +24,6 @@ namespace FanDuelDepthChart.Core.Services
             return _sports.GetValueOrDefault(name);
         }
 
-        public IEnumerable<ISport> GetAllSports() => _sports.Values;
+        public IReadOnlyCollection<ISport> GetAllSports() => _sports.Values;
     }
 }

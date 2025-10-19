@@ -38,6 +38,6 @@ namespace FanDuelDepthChart.Core.Services
             return _teams.GetValueOrDefault(name);
         }
 
-        public IEnumerable<ITeam> GetAllTeams() => _teams.Values;
+        public IReadOnlyCollection<ITeam> GetAllTeams() => _teams.Values;
     }
 }

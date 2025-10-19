@@ -1,6 +1,6 @@
 ﻿namespace FanDuelDepthChart.Core.Constants
 {
-    public class NflPositions
+    public static class NflPositions
     {
         // Offense
         public const string QB = "QB";

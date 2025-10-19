@@ -6,6 +6,6 @@
         HashSet<string> ValidPositions { get; }
         void AddTeam(ITeam team);
         ITeam? GetTeam(string name);
-        IEnumerable<ITeam> GetAllTeams();
+        IReadOnlyCollection<ITeam> GetAllTeams();
     }
 }

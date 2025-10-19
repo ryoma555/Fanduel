@@ -68,30 +68,22 @@ teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.LS, mike);
 teamAwesome.DepthChart.AddPlayerToDepthChart(NflPositions.LS, travis);
 
 // Display backups for a position
-Console.WriteLine($"\nQB Backups for {tom.Name}:");
-foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.QB, tom))
-{
-    Console.WriteLine(backup);
-}
+printBackups(NflPositions.QB, tom);
 
-Console.WriteLine($"\nTE Backups for {travis.Name}:");
-foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.TE, travis))
-{
-    Console.WriteLine(backup);
-}
+printBackups(NflPositions.TE, travis);
 
-Console.WriteLine($"\nRB Backups for {taylor.Name}:");
-foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.RB, taylor))
-{
-    Console.WriteLine(backup);
-}
+printBackups(NflPositions.RB, taylor);
 
-Console.WriteLine($"\nLS Backups for {mike.Name}:");
-foreach (var backup in teamAwesome.DepthChart.GetBackups(NflPositions.LS, mike))
-{
-    Console.WriteLine(backup);
-}
+printBackups(NflPositions.LS, mike);
 
 // Display full depth chart
 Console.WriteLine("\nFull Depth Chart:");
 Console.WriteLine(teamAwesome.DepthChart.GetFullDepthChart());
+
+void printBackups(string position, Player player)
+{
+    var backups = teamAwesome.DepthChart.GetBackups(position, player);
+    Console.WriteLine($"\n{position} Backups for {player.Name}:");
+    if (!backups.Any()) Console.WriteLine("None");
+    else foreach (var b in backups) Console.WriteLine(b);
+}

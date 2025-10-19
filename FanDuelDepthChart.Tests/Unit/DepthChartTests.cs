@@ -22,12 +22,13 @@ namespace FanDuelDepthChart.Tests.Unit
             _mikeTyson = new Player("Mike Tyson", 3);
         }
 
-        [Test]
-        public void AddPlayerToDepthChart_ShouldAddPlayer_WhenPositionIsNew()
+        [TestCase(NflPositions.QB)]
+        [TestCase(NflPositions.RB)]
+        public void AddPlayerToDepthChart_ShouldAddPlayer_WhenPositionIsNew(string position)
         {
-            _depthChart.AddPlayerToDepthChart(NflPositions.QB, _tomBrady);
+            _depthChart.AddPlayerToDepthChart(position, _tomBrady);
 
-            var backups = _depthChart.GetBackups(NflPositions.QB, _tomBrady);
+            var backups = _depthChart.GetBackups(position, _tomBrady);
             Assert.That(backups, Is.Empty);
         }
 

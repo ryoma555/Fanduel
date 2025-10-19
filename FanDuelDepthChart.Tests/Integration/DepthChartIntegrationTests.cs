@@ -47,8 +47,10 @@ namespace FanDuelDepthChart.Tests.Integration
 
             var chartOutput = _team.DepthChart.GetFullDepthChart();
 
-            Assert.That(chartOutput, Does.Contain("QB – (#12, Tom Brady), (#11, John Cena)"));
-            Assert.That(chartOutput, Does.Contain("LS – (#13, Mike Tyson)"));
+            Assert.That(chartOutput, Is.EqualTo("""
+                QB – (#12, Tom Brady), (#11, John Cena)
+                LS – (#13, Mike Tyson)
+                """));
         }
 
         [Test]
@@ -72,8 +74,7 @@ namespace FanDuelDepthChart.Tests.Integration
             _team.DepthChart.RemovePlayerFromDepthChart(NflPositions.QB, _tom);
             var chartOutput = _team.DepthChart.GetFullDepthChart();
 
-            Assert.That(chartOutput, Does.Not.Contain("Tom Brady"));
-            Assert.That(chartOutput, Does.Contain("John Cena"));
+            Assert.That(chartOutput, Is.EqualTo("QB – (#11, John Cena)"));
         }
 
         [Test]
@@ -84,9 +85,10 @@ namespace FanDuelDepthChart.Tests.Integration
 
             var output = _team.DepthChart.GetFullDepthChart();
 
-            Assert.That(output, Does.Contain("QB – (#12, Tom Brady)"));
-            Assert.That(output, Does.Contain("LS – (#13, Mike Tyson)"));
-            Assert.That(output.Split('\n'), Has.Length.GreaterThanOrEqualTo(2));
+            Assert.That(output, Is.EqualTo("""
+                QB – (#12, Tom Brady)
+                LS – (#13, Mike Tyson)
+                """));
         }
 
         [Test]
@@ -98,8 +100,7 @@ namespace FanDuelDepthChart.Tests.Integration
             _team.DepthChart.RemovePlayerFromDepthChart(NflPositions.QB, _tom);
 
             var chartOutput = _team.DepthChart.GetFullDepthChart();
-            Assert.That(chartOutput, Does.Not.Contain("QB – (#12, Tom Brady)"));
-            Assert.That(chartOutput, Does.Contain("LS – (#12, Tom Brady)"));
+            Assert.That(chartOutput, Is.EqualTo("LS – (#12, Tom Brady)"));
         }
 
         [Test]
@@ -115,7 +116,7 @@ namespace FanDuelDepthChart.Tests.Integration
         [Test]
         public void EmptyDepthChart_ShouldReturnEmptyString()
         {
-            var emptyDepthChart = new DepthChart(new HashSet<string> { NflPositions.QB });
+            var emptyDepthChart = new DepthChart([NflPositions.QB]);
             var output = emptyDepthChart.GetFullDepthChart();
 
             Assert.That(output, Is.EqualTo(string.Empty));
@@ -142,7 +143,7 @@ namespace FanDuelDepthChart.Tests.Integration
         [Test]
         public void AddingPlayer_ShouldSucceed_WhenValidPositionsIsEmptyOrNull()
         {
-            var chartEmpty = new DepthChart(new HashSet<string>());
+            var chartEmpty = new DepthChart([]);
             Assert.DoesNotThrow(() => chartEmpty.AddPlayerToDepthChart("ANY_POS", _tom));
 
             var chartNull = new DepthChart(null!);

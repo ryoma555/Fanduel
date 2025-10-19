@@ -1,7 +1,6 @@
 # 🏈 FanDuel Depth Chart
 
-A modular C# solution to manage and visualize team depth charts for different sports (e.g., NFL).  
-The system allows adding, removing, and retrieving players per position, supports multiple sports and teams, and includes both unit and integration tests.
+This solution provides a flexible and scalable framework for managing depth charts across multiple sports and teams. New sports, positions, and teams can be added dynamically without modifying existing code. Each team maintains its own depth chart, supporting multiple positions per player. Comprehensive unit and integration tests cover all edge cases, ensuring correctness and preventing regressions. The code is modular, well-organized, and easy to maintain, with clear separation of concerns and dependency injection for maximum flexibility.
 
 ---
 
@@ -92,6 +91,12 @@ Key methods:
 - `GetBackups(string position, Player player)`
 - `GetFullDepthChart()`
 
+Supports:
+- Duplicate player prevention
+- Multi-position players
+- Automatic insertion at specified depth or appending at end
+- Empty position handling in full depth chart
+
 ### Sport and Team
 - **Sport**: Manages valid positions and multiple teams.
 - **Team**: Owns a depth chart for managing its players.
@@ -137,3 +142,11 @@ team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, john);
 var backups = team.DepthChart.GetBackups(NflPositions.QB, tom);
 Console.WriteLine(team.DepthChart.GetFullDepthChart());
 ```
+
+---
+
+### 🔮 Future Enhancements
+- Add support for more sports like MLB, NHL, NBA.
+- Add all teams dynamically using configuration files or database.
+- Build a web API for interactive depth chart management.
+- Persist depth charts to storage for long-term tracking.

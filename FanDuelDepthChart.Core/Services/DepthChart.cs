@@ -50,7 +50,7 @@ namespace FanDuelDepthChart.Core.Services
             if (!_chart.TryGetValue(position, out var players))
                 return null;
 
-            int index = players.FindIndex(p => p.Number == player.Number);
+            int index = players.FindIndex(p => p == player);
             // Return null if player not found
             if (index < 0)
                 return null;
@@ -60,7 +60,7 @@ namespace FanDuelDepthChart.Core.Services
             return removed;
         }
 
-        public List<Player> GetBackups(string position, Player player)
+        public IReadOnlyList<Player> GetBackups(string position, Player player)
         {
             ValidatePositionAndPlayer(position, player);
 
@@ -68,7 +68,7 @@ namespace FanDuelDepthChart.Core.Services
             if (!_chart.TryGetValue(position, out var players))
                 return [];
 
-            int index = players.FindIndex(p => p.Number == player.Number);
+            int index = players.FindIndex(p => p == player);
 
             // If player not found or is the last in the list, return empty list
             if (index == -1 || index == players.Count - 1) return [];
@@ -79,7 +79,9 @@ namespace FanDuelDepthChart.Core.Services
         public string GetFullDepthChart()
         {
             return string.Join(Environment.NewLine,
-                _chart.Select(kvp => $"{kvp.Key} – {string.Join(", ", kvp.Value)}"));
+                _chart
+                    .Where(kvp => kvp.Value.Count > 0)
+                    .Select(kvp => $"{kvp.Key} – {string.Join(", ", kvp.Value)}"));
         }
 
         private void ValidatePositionAndPlayer(string position, Player player)
