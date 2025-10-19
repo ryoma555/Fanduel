@@ -1,5 +1,5 @@
 ﻿using FanDuelDepthChart.Core.Interfaces;
-using FanDuelDepthChart.Models;
+using FanDuelDepthChart.Core.Models;
 
 namespace FanDuelDepthChart.Core.Services
 {

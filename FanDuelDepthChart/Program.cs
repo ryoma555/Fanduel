@@ -1,8 +1,7 @@
-﻿using FanDuelDepthChart.Constants;
-using FanDuelDepthChart.Core.Constants;
+﻿using FanDuelDepthChart.Core.Constants;
 using FanDuelDepthChart.Core.Interfaces;
+using FanDuelDepthChart.Core.Models;
 using FanDuelDepthChart.Core.Services;
-using FanDuelDepthChart.Models;
 using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("FanDuel DepthChart Demo");

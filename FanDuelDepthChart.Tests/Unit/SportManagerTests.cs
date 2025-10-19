@@ -1,5 +1,4 @@
-﻿using FanDuelDepthChart.Constants;
-using FanDuelDepthChart.Core.Constants;
+﻿using FanDuelDepthChart.Core.Constants;
 using FanDuelDepthChart.Core.Services;
 
 namespace FanDuelDepthChart.Tests.Unit

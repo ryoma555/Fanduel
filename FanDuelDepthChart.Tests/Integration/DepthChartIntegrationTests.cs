@@ -1,7 +1,6 @@
-﻿using FanDuelDepthChart.Constants;
-using FanDuelDepthChart.Core.Constants;
+﻿using FanDuelDepthChart.Core.Constants;
+using FanDuelDepthChart.Core.Models;
 using FanDuelDepthChart.Core.Services;
-using FanDuelDepthChart.Models;
 
 namespace FanDuelDepthChart.Tests.Integration
 {

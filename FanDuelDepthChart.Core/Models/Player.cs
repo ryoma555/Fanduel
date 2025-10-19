@@ -1,4 +1,4 @@
-﻿namespace FanDuelDepthChart.Models
+﻿namespace FanDuelDepthChart.Core.Models
 {
     public record Player(string Name, int Number)
     {

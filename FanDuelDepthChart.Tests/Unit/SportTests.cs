@@ -1,5 +1,4 @@
-﻿using FanDuelDepthChart.Constants;
-using FanDuelDepthChart.Core.Constants;
+﻿using FanDuelDepthChart.Core.Constants;
 using FanDuelDepthChart.Core.Interfaces;
 using FanDuelDepthChart.Core.Services;
 using Moq;

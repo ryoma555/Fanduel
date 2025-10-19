@@ -1,4 +1,4 @@
-﻿namespace FanDuelDepthChart.Constants
+﻿namespace FanDuelDepthChart.Core.Constants
 {
     public class NflPositions
     {

@@ -1,4 +1,4 @@
-﻿using FanDuelDepthChart.Models;
+﻿using FanDuelDepthChart.Core.Models;
 
 namespace FanDuelDepthChart.Core.Interfaces
 {
