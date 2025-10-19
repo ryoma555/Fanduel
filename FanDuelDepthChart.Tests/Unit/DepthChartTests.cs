@@ -200,7 +200,7 @@ namespace FanDuelDepthChart.Tests.Unit
         [Test]
         public void ValidatePosition_ShouldSkipCheck_WhenValidPositionsIsEmpty()
         {
-            var depthChart = new DepthChart([]);
+            var depthChart = new DepthChart(new HashSet<string> { });
 
             Assert.DoesNotThrow(() =>
                 depthChart.AddPlayerToDepthChart("RANDOM_POSITION", _tomBrady));

@@ -5,7 +5,7 @@ namespace FanDuelDepthChart.Core.Services
     public class Sport : ISport
     {
         public string Name { get; }
-        public HashSet<string> ValidPositions { get; }
+        public IReadOnlySet<string> ValidPositions { get; }
         private readonly Dictionary<string, ITeam> _teams = [];
 
         public Sport(string name, IEnumerable<string> validPositions)

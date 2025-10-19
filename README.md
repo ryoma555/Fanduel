@@ -73,15 +73,6 @@ FanDuel
 
 ## 🧠 Core Concepts
 
-### Player Model
-A lightweight immutable record representing a player.
-```csharp
-public record Player(string Name, int Number)
-{
-    public override string ToString() => $"(#{Number}, {Name})";
-}
-```
-
 ### Depth Chart
 Handles ordered player management per position.
 
@@ -146,7 +137,8 @@ Console.WriteLine(team.DepthChart.GetFullDepthChart());
 ---
 
 ### 🔮 Future Enhancements
-- Add support for more sports like MLB, NHL, NBA.
-- Add all teams dynamically using configuration files or database.
+- Add support for more sports like MLB, NHL, and NBA.
+- Add all teams dynamically using configuration files or a database.
 - Build a web API for interactive depth chart management.
-- Persist depth charts to storage for long-term tracking.
+- This will require thread-safety enhancements (e.g., locking or concurrent collections) to handle simultaneous updates to the same team or position safely.
+- Persist depth charts to a storage layer (e.g., SQL, NoSQL, or in-memory cache) for long-term tracking and analytics.

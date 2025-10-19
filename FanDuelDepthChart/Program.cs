@@ -12,41 +12,14 @@ var services = new ServiceCollection();
 // Register SportManager as singleton
 services.AddSingleton<ISportManager, SportManager>();
 
-// Register Sport/s
-services.AddSingleton<ISport>(provider =>
-{
-    var sportManager = provider.GetRequiredService<ISportManager>();
-
-    var nfl = new Sport(SportTypes.NFL, NflPositions.All);
-    sportManager.AddSport(nfl);
-
-    return nfl;
-});
-
-// Register Team/s
-services.AddSingleton<ITeam>(provider =>
-{
-    var allSports = provider.GetServices<ISport>();
-    var nfl = allSports.First(s => s.Name == SportTypes.NFL);
-
-    var depthChart = new DepthChart(nfl.ValidPositions);
-    var team = new Team("Team Awesome", depthChart);
-    nfl.AddTeam(team);
-
-    return team;
-});
-
-// Build the provider
 var provider = services.BuildServiceProvider();
 
-// Resolve services
 var sportManager = provider.GetRequiredService<ISportManager>();
-var allSports = provider.GetServices<ISport>();
-var nfl = allSports.Single(s => s.Name == SportTypes.NFL);
+var nfl = new Sport(SportTypes.NFL, NflPositions.All);
+sportManager.AddSport(nfl);
 
-// Resolve Teams
-var allTeams = provider.GetServices<ITeam>().ToList();
-var teamAwesome = allTeams.Single(t => t.Name == "Team Awesome");
+var teamAwesome = new Team("Team Awesome", new DepthChart(nfl.ValidPositions));
+nfl.AddTeam(teamAwesome);
 
 // Create players
 var tom = new Player("Tom Brady", 12);

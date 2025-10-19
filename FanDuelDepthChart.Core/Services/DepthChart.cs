@@ -6,11 +6,11 @@ namespace FanDuelDepthChart.Core.Services
     public class DepthChart : IDepthChart
     {
         private readonly Dictionary<string, List<Player>> _chart = [];
-        private readonly HashSet<string> _validPositions;
+        private readonly IReadOnlySet<string> _validPositions;
 
-        public DepthChart(HashSet<string> validPositions)
+        public DepthChart(IReadOnlySet<string> validPositions)
         {
-            _validPositions = validPositions ?? [];
+            _validPositions = validPositions ?? new HashSet<string>();
         }
 
         public void AddPlayerToDepthChart(string position, Player player, int? positionDepth = null)
@@ -28,8 +28,8 @@ namespace FanDuelDepthChart.Core.Services
             }
 
             // Prevent adding duplicate players
-            if (players.Any(p => p.Number == player.Number))
-                throw new InvalidOperationException($"Player #{player.Number} already exists at position '{position}'.");
+            if (players.Any(p => p == player))
+                throw new InvalidOperationException($"Player {player} already exists at position '{position}'.");
 
             // Ensure positionDepth is within bounds
             if (!positionDepth.HasValue || positionDepth >= players.Count)
@@ -90,7 +90,7 @@ namespace FanDuelDepthChart.Core.Services
                 throw new ArgumentException("Position must be provided.", nameof(position));
 
             // only check valid positions if provided
-            if (_validPositions != null && _validPositions.Count > 0 && !_validPositions.Contains(position))
+            if (_validPositions.Count > 0 && !_validPositions.Contains(position))
                 throw new ArgumentException($"Invalid position '{position}' for this sport.", nameof(position));
 
             ArgumentNullException.ThrowIfNull(player);

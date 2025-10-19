@@ -116,7 +116,7 @@ namespace FanDuelDepthChart.Tests.Integration
         [Test]
         public void EmptyDepthChart_ShouldReturnEmptyString()
         {
-            var emptyDepthChart = new DepthChart([NflPositions.QB]);
+            var emptyDepthChart = new DepthChart(new HashSet<string> { NflPositions.QB });
             var output = emptyDepthChart.GetFullDepthChart();
 
             Assert.That(output, Is.EqualTo(string.Empty));
@@ -146,7 +146,7 @@ namespace FanDuelDepthChart.Tests.Integration
         [Test]
         public void AddingPlayer_ShouldSucceed_WhenValidPositionsIsEmptyOrNull()
         {
-            var chartEmpty = new DepthChart([]);
+            var chartEmpty = new DepthChart(new HashSet<string> { });
             Assert.DoesNotThrow(() => chartEmpty.AddPlayerToDepthChart("ANY_POS", _tom));
 
             var chartNull = new DepthChart(null!);
