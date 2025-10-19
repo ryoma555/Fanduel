@@ -108,8 +108,7 @@ manager.AddSport(new Sport(SportTypes.NFL, NflPositions.All));
 ## 🚀 Running the Program
 
 ```bash
-cd FanDuelDepthChart
-dotnet run
+dotnet run --project FanDuelDepthChart
 ```
 
 ---
@@ -117,8 +116,7 @@ dotnet run
 ## 🧪 Running the Tests
 
 ```bash
-cd FanDuelDepthChart.Tests
-dotnet test
+dotnet test --project FanDuelDepthChart.Tests
 ```
 
 ---
