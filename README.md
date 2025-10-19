@@ -121,7 +121,7 @@ dotnet run --project FanDuelDepthChart
 ## 🧪 Running the Tests
 
 ```bash
-dotnet test --project FanDuelDepthChart.Tests
+dotnet test
 ```
 
 ---
