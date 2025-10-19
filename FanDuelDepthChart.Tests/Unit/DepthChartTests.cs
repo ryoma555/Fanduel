@@ -43,7 +43,7 @@ namespace FanDuelDepthChart.Tests.Unit
             // Expect order: Tom Brady, John Cena, Mike Tyson, Mike got pushed to 3rd position
             var backups = _depthChart.GetBackups(NflPositions.QB, _tomBrady);
             Assert.That(backups.Count, Is.EqualTo(2));
-            Assert.That(backups, Is.EqualTo(new List<Player> { _johnCena, _mikeTyson}));
+            Assert.That(backups, Is.EqualTo([_johnCena, _mikeTyson]));
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace FanDuelDepthChart.Tests.Unit
             _depthChart.AddPlayerToDepthChart(NflPositions.QB, _johnCena, 10); // index > count
 
             var backups = _depthChart.GetBackups(NflPositions.QB, _tomBrady);
-            Assert.That(backups, Is.EqualTo(new List<Player> { _johnCena }));
+            Assert.That(backups, Is.EqualTo([_johnCena]));
         }
 
         [Test]
@@ -105,7 +105,7 @@ namespace FanDuelDepthChart.Tests.Unit
             _depthChart.AddPlayerToDepthChart(NflPositions.QB, _mikeTyson, 100);
 
             var backups = _depthChart.GetBackups(NflPositions.QB, _tomBrady);
-            Assert.That(backups, Is.EqualTo(new List<Player> { _johnCena, _mikeTyson }));
+            Assert.That(backups, Is.EqualTo([_johnCena, _mikeTyson]));
         }
 
         [Test]
@@ -148,7 +148,7 @@ namespace FanDuelDepthChart.Tests.Unit
             var backups = _depthChart.GetBackups(NflPositions.QB, _tomBrady);
 
             Assert.That(backups.Count, Is.EqualTo(2));
-            Assert.That(backups, Is.EqualTo(new List<Player> { _johnCena, _mikeTyson }));
+            Assert.That(backups, Is.EqualTo([_johnCena, _mikeTyson]));
         }
 
         [Test]
@@ -210,7 +210,7 @@ namespace FanDuelDepthChart.Tests.Unit
         public void ValidatePosition_ShouldSkipCheck_WhenValidPositionsIsNull()
         {
             var depthChart = new DepthChart(null!);
-            
+
             Assert.DoesNotThrow(() =>
                 depthChart.AddPlayerToDepthChart("RANDOM_POSITION", _tomBrady));
         }

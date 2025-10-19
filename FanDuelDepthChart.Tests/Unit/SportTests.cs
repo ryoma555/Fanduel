@@ -77,7 +77,7 @@ namespace FanDuelDepthChart.Tests.Unit
 
             var teams = _sport.GetAllTeams().ToList();
             Assert.That(teams.Count, Is.EqualTo(2));
-            Assert.That(teams, Is.EquivalentTo(new List<ITeam> { _mockTeam.Object, mockTeam2.Object }));
+            Assert.That(teams, Is.EqualTo([_mockTeam.Object, mockTeam2.Object]));
         }
 
         [Test]

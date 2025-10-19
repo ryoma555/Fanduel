@@ -78,7 +78,7 @@ namespace FanDuelDepthChart.Tests.Unit
             _manager.AddSport(nba);
 
             var allSports = _manager.GetAllSports().ToList();
-            Assert.That(allSports, Is.EquivalentTo(new List<Sport> { _nfl, nba }));
+            Assert.That(allSports, Is.EqualTo([_nfl, nba]));
         }
 
         [Test]

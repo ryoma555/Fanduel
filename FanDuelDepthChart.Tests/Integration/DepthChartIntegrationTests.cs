@@ -130,7 +130,10 @@ namespace FanDuelDepthChart.Tests.Integration
             _team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, _mike, 100); // append at end
 
             var backups = _team.DepthChart.GetBackups(NflPositions.QB, _tom);
-            Assert.That(backups, Is.EqualTo(new List<Player> { _john, _mike }));
+            Assert.That(backups, Is.EqualTo([_john, _mike]));
+
+            var output = _team.DepthChart.GetFullDepthChart();
+            Assert.That(output, Is.EqualTo("QB – (#12, Tom Brady), (#11, John Cena), (#13, Mike Tyson)"));
         }
 
         [Test]
@@ -158,7 +161,13 @@ namespace FanDuelDepthChart.Tests.Integration
             _team.DepthChart.AddPlayerToDepthChart(NflPositions.QB, _mike);
 
             var backups = _team.DepthChart.GetBackups(NflPositions.QB, _tom);
-            Assert.That(backups, Is.EqualTo(new List<Player> { _john, _mike }));
+            Assert.That(backups, Is.EqualTo([_john, _mike]));
+
+            backups = _team.DepthChart.GetBackups(NflPositions.QB, _john);
+            Assert.That(backups, Is.EqualTo([_mike]));
+
+            backups = _team.DepthChart.GetBackups(NflPositions.QB, _mike);
+            Assert.That(backups, Is.Empty);
         }
 
         [Test]
