@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanDuelDepthChart", "FanDuelDepthChart.csproj", "{A312A079-F676-470E-B2B4-B314C089BC01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanDuelDepthChart", ".\FanDuelDepthChart\FanDuelDepthChart.csproj", "{A312A079-F676-470E-B2B4-B314C089BC01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanDuelDepthChart.Tests", "..\FanDuelDepthChart.Tests\FanDuelDepthChart.Tests.csproj", "{DB690A29-7941-471D-847E-1AA46823D672}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanDuelDepthChart.Tests", ".\FanDuelDepthChart.Tests\FanDuelDepthChart.Tests.csproj", "{DB690A29-7941-471D-847E-1AA46823D672}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanDuelDepthChart.Core", "..\FanDuelDepthChart.Core\FanDuelDepthChart.Core.csproj", "{E98AF06B-043D-4A17-9991-64CEA5C21BAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanDuelDepthChart.Core", ".\FanDuelDepthChart.Core\FanDuelDepthChart.Core.csproj", "{E98AF06B-043D-4A17-9991-64CEA5C21BAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
